@@ -24,10 +24,14 @@
         <!-- form to add new movie -->
         <br>
         <form ng-submit="movies.addNewMovie()">
+          <div class="form-group">
+          <label for="movie-title">Movie Title</label>
+          <input type="text" data-ng-model="movies.movie.title" class="form-control" placeholder="What do you want to watch?" autofocus>
+        </div>
+        <input type="submit" value="Add Movie" class="btn btn-default">
+      </form>
 
-
-
-      <div ng-repeat="movie in movies.moviesToWatch | orderBy:'title'" >
+      <div ng-repeat="movie in movies.moviesToWatch | orderBy:'title'" | limitTo: movies.movieLimit" >
         <p>{{movie.title}}</p>
       </div>
       <div>

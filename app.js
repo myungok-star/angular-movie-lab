@@ -45,4 +45,8 @@ angular
       vm.movie = {};
       vm.moviesToWatch.push(newMovie);
     };
+
+    vm.movieLimit = 5;
+
+
 };
