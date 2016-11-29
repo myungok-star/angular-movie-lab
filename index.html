@@ -31,7 +31,7 @@
         <input type="submit" value="Add Movie" class="btn btn-default">
       </form>
 
-      <div ng-repeat="movie in movies.moviesToWatch | orderBy:'title'" | limitTo: movies.movieLimit" >
+      <div ng-repeat="movie in movies.moviesToWatch | orderBy:'title' | limitTo: movies.movieLimit">
         <p>{{movie.title}}</p>
       </div>
       <div>
